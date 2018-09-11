@@ -1,10 +1,12 @@
 {
   "syms": [
     "FB",
-    "AAPL",
+    "AMZN",
     "NFLX",
-    "AMZN"
+    "GOOGL"
   ],
-  "show_plot": false
-
+  "show_plot": true,
+  "fast_rate": 20,
+  "slow_rate": 50,
+  "tolerance": 0.01
 }

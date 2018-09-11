@@ -39,23 +39,24 @@ def main(sym, fast_rate = 20, slow_rate = 50, tolerance = 0.01, show_plot = Fals
 
     fast_is_increasing = (last.at[fast_key] - prev.at[fast_key]) > 0
 
+    status = None
+
     if(last_absolute_diff < close_tolerance and fast_is_increasing):
-        print(sym+': enter')
+        status = 'enter'
     elif(last_absolute_diff < close_tolerance and not(fast_is_increasing)):
-        print(sym+': exit')
+        status = 'exit'
     else:
-        print(sym+': hold')
+        status='hold'
+
+    print('%s: %s' % (sym, status))
 
     if(show_plot):
-        ax = df[close_key].plot(title=sym)
-        df[fast_key].plot()
-        df[slow_key].plot()
+        ax = df.plot(title='%s %s' % (status, sym), y=[close_key, slow_key, fast_key])
         ax.xaxis.label.set_visible(False)
         plt.show(block=True)
 
 with open('config.json') as f:
     data = json.load(f)
     syms = data['syms'] or []
-    show_plot = data['show_plot']
     for sym in syms:
-        main(sym=sym, show_plot=show_plot)
+        main(sym=sym, show_plot=data['show_plot'], fast_rate=data['fast_rate'], slow_rate=data['slow_rate'], tolerance=data['tolerance'])
