@@ -1,0 +1,10 @@
+{
+  "syms": [
+    "FB",
+    "AAPL",
+    "NFLX",
+    "AMZN"
+  ],
+  "show_plot": false
+
+}

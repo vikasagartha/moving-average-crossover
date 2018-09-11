@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from fetch_data import Data
 import matplotlib.pyplot as plt
+import json
 
 close_key = 'close'
 date_key = 'date'
@@ -50,3 +51,10 @@ def main(sym, fast_rate = 20, slow_rate = 50, tolerance = 0.01, show_plot = Fals
         df[slow_key].plot(grid=True,figsize=(8,5))
         df[fast_key].plot(grid=True,figsize=(8,5))
         plt.show(block=True)
+
+with open('config.json') as f:
+    data = json.load(f)
+    syms = data['syms'] or []
+    show_plot = data['show_plot']
+    for sym in syms:
+        main(sym=sym, show_plot=show_plot)
