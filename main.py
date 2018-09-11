@@ -47,9 +47,10 @@ def main(sym, fast_rate = 20, slow_rate = 50, tolerance = 0.01, show_plot = Fals
         print(sym+': hold')
 
     if(show_plot):
-        df[close_key].plot(grid=True,figsize=(8,5))
-        df[slow_key].plot(grid=True,figsize=(8,5))
-        df[fast_key].plot(grid=True,figsize=(8,5))
+        ax = df[close_key].plot(title=sym)
+        df[fast_key].plot()
+        df[slow_key].plot()
+        ax.xaxis.label.set_visible(False)
         plt.show(block=True)
 
 with open('config.json') as f:
