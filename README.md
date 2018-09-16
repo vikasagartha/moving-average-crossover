@@ -19,3 +19,5 @@ example:
   "tolerance": 0.01
 }
 ```
+
+Setup is trival. Clone the repo. Change the `config.json` to suite your needs. Run `python main.py`.
