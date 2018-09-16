@@ -4,7 +4,7 @@
 * show_plot: bool
 * fast_rate: int (days) 
 * slow_rate: int (days)
-* tolerance: int
+* tolerance: float
 
 Most of the params are self-explanatory. But tolerance might be slightly confusing.
 
