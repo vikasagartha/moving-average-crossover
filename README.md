@@ -9,21 +9,9 @@ example:
 ```
 {
   "syms": [
-    "CY",
-    "TTM",
-    "FIT",
-    "COLM",
-    "HD",
-    "TWLO",
-    "SQ",
-    "IRBT",
-    "SEND",
-    "VFC",
     "GOOGL",
-    "DKS",
-    "PLNT",
+    "FB",
     "GOGO",
-    "BA"
   ],
   "show_plot": true,
   "fast_rate": 20,
