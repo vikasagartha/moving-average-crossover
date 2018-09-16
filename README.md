@@ -1,4 +1,4 @@
-## Config options
+### Config options
 
 * syms: [string]
 * show_plot: bool
@@ -14,7 +14,7 @@ Asset prices are discrete values. So when a crossover occurs, the asset values w
 
 Tolerance represents the fraction of the price which is close enough to call an intersection.
 
-consider a case where sma_fast is above sma_slow:
+Consider a case where sma_fast is above sma_slow:
 
 ```
 sma_fast = 31
@@ -27,7 +27,7 @@ delta = tolerance*price = 0.35
 
 `sma_fast > sma_slow`. But this is not marked as an intersection, because `abs(sma_fast-sma_slow) > delta`.
 
-Example config:
+### Example config
 
 ```
 {
@@ -43,4 +43,8 @@ Example config:
 }
 ```
 
-Setup is trival. Clone the repo. Change the `config.json` to suite your needs. Run `python main.py`.
+### Setup 
+
+1. Clone the repo
+2. Change the `config.json` to suite your needs
+3. Run `python main.py`
