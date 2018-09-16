@@ -1,9 +1,12 @@
 ## Config options
 
-* syms -> list of symbols
-* show_plot: boolean
-* fast_rate: moving average crossover sma
-* slow_rate: moving average crossover sma
+* syms: [string]
+* show_plot: bool
+* fast_rate: int (days) 
+* slow_rate: int (days)
+
+example:
+```
 {
   "syms": [
     "CY",
@@ -27,3 +30,4 @@
   "slow_rate": 50,
   "tolerance": 0.01
 }
+```
