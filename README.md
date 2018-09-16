@@ -11,7 +11,7 @@ example:
   "syms": [
     "GOOGL",
     "FB",
-    "GOGO",
+    "GOGO"
   ],
   "show_plot": true,
   "fast_rate": 20,
